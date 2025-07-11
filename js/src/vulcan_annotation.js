@@ -417,6 +417,13 @@ class Choice {
         const tokens = selector.split(" ");
         return this.__queryMetadata(tokens);
     }
+
+    static checkAnnotation(node, parentPath = '', internalKeyCounter = 0) {
+        // input: JavaScript object representing the annotation
+        // output: an object with keys: 'errors' (array of errors), 'warnings' (array of warnings), 'revised_node' (revised annotation object)
+        return checkAnnotation(node, parentPath, internalKeyCounter);
+    }
+
 }
 
 Annotation_logic = Choice;

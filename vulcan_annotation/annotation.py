@@ -6,6 +6,7 @@ changed: added max_size
 import json
 import os
 import shortuuid
+from .annotation_checking import check_annotation
 
 
 class Annotation:
@@ -371,6 +372,12 @@ class Annotation:
         tokens = selector.split(" ")
         result = self.__queryMetadata(tokens)
         return None if result is None else result
+    
+    @staticmethod
+    def check_annotation(node, parent_path='', internal_key_counter=0):
+        # input: Python dictionary representing the annotation
+        # output: a dictionary with keys: 'errors' (list of errors), 'warnings' (list of warnings), 'revised_node' (revised annotation dict)
+        return check_annotation(node, parent_path, internal_key_counter)
 
 
 if __name__ == '__main__':

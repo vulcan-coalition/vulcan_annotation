@@ -268,7 +268,6 @@ if (require.main === module) {
     // node annotation_checking.js sun_data/sun_vending.json --output_path sun_data/sun_vending_revised.json --error_logging_path sun_data/sun_vending_errors_logging.json
 }
 
-module.exports = {
-    checkAnnotation,
-    checkAnnotationFull
-};
+// Make functions available globally for browser use
+window.checkAnnotation = checkAnnotation;
+window.checkAnnotationFull = checkAnnotationFull;
