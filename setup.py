@@ -10,9 +10,9 @@ import os
 import shutil
 # copy js/src directory into package js directory
 
-if os.path.exists("build/lib/vulcan_annotation/js"):
-    shutil.rmtree("build/lib/vulcan_annotation/js")
-shutil.copytree("js/src", "build/lib/vulcan_annotation/js")
+# if os.path.exists("build/lib/vulcan_annotation/js"):
+#     shutil.rmtree("build/lib/vulcan_annotation/js")
+# shutil.copytree("js/src", "build/lib/vulcan_annotation/js")
 
 setup(
     name="vulcan-annotation",
@@ -25,7 +25,7 @@ setup(
     url="https://github.com/vulcan-coalition/vulcan_annotation",
     packages=["vulcan_annotation"],
     package_data={
-        "": ["js/*"]
+        # "": ["js/*"]
     },
     classifiers=[
         "Programming Language :: Python :: 3",
