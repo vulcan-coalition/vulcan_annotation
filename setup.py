@@ -16,7 +16,7 @@ shutil.copytree("js/src", "build/lib/vulcan_annotation/js")
 
 setup(
     name="vulcan-annotation",
-    version="3.1.5",
+    version="3.1.6",
     author="Chatavut Viriyasuthee",
     author_email="chatavut@lab.ai",
     description="Vulcan annotation for structured data.",
